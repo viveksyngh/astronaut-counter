@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  astronaut-counter:
+    lang: python3
+    handler: ./astronaut-counter
+    image: viveksyngh/astronaut-counter:latest
+    environment:
+      write_debug: true
+      combine_output: false
